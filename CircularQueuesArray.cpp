@@ -44,6 +44,32 @@ class Queues
         
     }
 
+    void remove()
+    {
+        if (FRONT == -1)
+        {
+            cout << "Queue underflow\n";
+            return;
+        }
+        cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
+
+       
+        {
+            FRONT = -1;
+            REAR = -1;
+        }
+        else
+        {
+            if (FRONT == REAR)
+            {
+                FRONT = -1;
+                REAR = -1;
+            }
+            
+            else
+                FRONT = FRONT + 1;
+        }
+    }
 
     void display()
     {
