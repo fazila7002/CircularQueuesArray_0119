@@ -28,6 +28,19 @@ class Queues
             cout << "\nQueue overflow\n";
             return;
         }
+        if (FRONT == -1)
+        {
+            FRONT = 0;
+            REAR = 0;
+        }
+        else
+        {
+            if (FRONT == max - 1)
+            FRONT = 0;
+            else
+            FRONT = FRONT + 1;
+        }
+        
         
     }
 };
