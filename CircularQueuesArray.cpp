@@ -44,6 +44,7 @@ class Queues
         
     }
 
+
     void display()
     {
         int FRONT_Position = FRONT;
@@ -100,11 +101,40 @@ int main()
         cout << "4. Exit " << endl;
         cin >> ch;
         cout << endl;
+
+        switch (ch)
+        {
+        case '1':
+        {
+            q.insert();
+            break;
+        }
+        case '2':
+        {
+            q.remove();
+            break;
+        }
+        case '3':
+        {
+            q.display();
+            break;
+
+        }
+        case '4':
+        {
+            return 0;
+        }
+        default:
+        {
+            cout << "Invalid opstion !!" << endl;
+            break;
+        }
+        }
         }
         catch (exception& e)
         {
             cout << "check for the vlaues entered" << endl;
         }
-        
+        return 0;
     }
 }
